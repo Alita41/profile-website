@@ -1,23 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Welcome to the personal website of Talat Zehra Ali.">
-  <title>Home | Talat Zehra Ali</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b101a">
+  <meta name="description" content="Talat Zehra Ali — software engineer working across systems, AI engineering, and information retrieval. Explore AtlasSearch, DevLens, and NovaKV.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Talat Zehra Ali — Software Engineer">
+  <meta property="og:description" content="Building thoughtful software, from systems to search and AI.">
+  <title>Talat Zehra Ali | Software Engineer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <section class="home">
-    <img src="images/profile.jpg" alt="Profile photo of Talat Zehra Ali">
-    <h1>Hi, I’m Talat Zehra Ali</h1>
-    <p>Aspiring Software Engineer passionate about digital innovation, design.</p>
-  </section>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav-shell container" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Talat Zehra Ali — home"><span class="mark-box">T<span class="mark-accent">.</span></span><span class="wordmark-name">Talat <b>Ali</b></span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="site-menu">
+        <a href="#work">Work</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SOFTWARE ENGINEER <span class="eyebrow-rule"></span> CS · ML · SYSTEMS</div>
+        <h1 id="hero-heading">Turning complex<br>problems into <em>clear</em><br>software.</h1>
+        <p class="hero-subtitle">I'm <strong>Talat Zehra Ali</strong>. I design and build software across backend systems, information retrieval, and practical AI — with a focus on what happens under the hood.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a>
+          <a class="button button-quiet" href="https://github.com/Alita41" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Areas of focus"><span>01 / Systems</span><span>02 / Search</span><span>03 / Applied AI</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-grid"></div>
+        <div class="visual-topline"><span class="mono">// ENGINEERING FOCUS</span><span class="pulse-small"></span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="orbit-core"><span>&lt;/&gt;</span><small>BUILD / LEARN / ITERATE</small></div>
+        <div class="floating-node node-search"><span class="node-index">01</span><div><b>Search</b><small>BM25 · FAISS · RRF</small></div><span class="node-icon">↗</span></div>
+        <div class="floating-node node-ai"><span class="node-index">02</span><div><b>Applied AI</b><small>RAG · Evals · APIs</small></div><span class="node-icon">↗</span></div>
+        <div class="floating-node node-systems"><span class="node-index">03</span><div><b>Systems</b><small>C++ · TCP · Storage</small></div><span class="node-icon">↗</span></div>
+        <div class="visual-bottomline"><span>DESIGN ↔ IMPLEMENTATION</span><span>2026</span></div>
+      </div>
+      <a class="scroll-cue" href="#work" aria-label="Scroll to selected work"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <div class="marquee-band" aria-label="Technical focus areas"><div class="marquee-inner">SYSTEMS ENGINEERING <span>✳</span> INFORMATION RETRIEVAL <span>✳</span> AI INFRASTRUCTURE <span>✳</span> BACKEND DEVELOPMENT <span>✳</span></div></div>
+
+    <section class="section work-section container" id="work" aria-labelledby="work-heading">
+      <div class="section-heading reveal">
+        <div><p class="kicker"><span class="kicker-number">01.</span> FEATURED PROJECTS</p><h2 id="work-heading">Selected <span>work.</span></h2></div>
+        <p>Three hands-on projects exploring how search, intelligent software, and high-performance systems fit together.</p>
+      </div>
+
+      <div class="projects">
+        <article class="project-card project-search reveal">
+          <div class="project-copy">
+            <div class="project-overline"><span>01 / INFORMATION RETRIEVAL</span><span class="project-state">OPEN SOURCE</span></div>
+            <h3>Atlas<span>Search</span></h3>
+            <p>A hybrid Urdu/English retrieval engine, built around a custom C++17 BM25 core, with autocomplete, a Python API, caching, and an optional multilingual-E5 / FAISS retrieval path.</p>
+            <div class="project-tags"><span>C++17</span><span>Python</span><span>BM25</span><span>FAISS</span><span>Redis</span></div>
+            <a class="project-link" href="https://github.com/Alita41/atlassearch" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span><span class="sr-only"> for AtlasSearch</span></a>
+          </div>
+          <div class="project-graphic graphic-search" aria-hidden="true">
+            <div class="graphic-label">SEARCH PIPELINE <span>v1.0</span></div>
+            <div class="query-box"><span class="query-glyph">⌕</span><span>machine learning retrieval</span><span class="query-cursor"></span></div>
+            <div class="pipeline"><div><small>SPARSE</small><b>BM25</b><span>inverted index</span></div><div class="pipeline-join">+</div><div><small>OPTIONAL DENSE</small><b>E5 / FAISS</b><span>vector retrieval</span></div></div>
+            <div class="fusion-box"><span>↓</span><b>RRF</b><span class="mono">RANK FUSION</span></div>
+            <div class="result-lines"><i></i><i></i><i></i></div>
+          </div>
+        </article>
+
+        <article class="project-card project-ai reveal">
+          <div class="project-copy">
+            <div class="project-overline"><span>02 / AI ENGINEERING</span><span class="project-state">OPEN SOURCE</span></div>
+            <h3>Dev<span>Lens</span></h3>
+            <p>An engineering knowledge assistant that indexes code and GitHub context, retrieves relevant evidence, produces source-cited answers, and supports structured issue triage with a human-approval gate.</p>
+            <div class="project-tags"><span>Python</span><span>RAG</span><span>FastAPI</span><span>Vector Search</span><span>GitHub API</span></div>
+            <a class="project-link" href="https://github.com/Alita41/devlens" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span><span class="sr-only"> for DevLens</span></a>
+          </div>
+          <div class="project-graphic graphic-ai" aria-hidden="true">
+            <div class="graphic-label">KNOWLEDGE EXPLORER <span>● INDEXED</span></div>
+            <div class="ai-question"><span class="mono">Q</span> Where are write permissions checked?</div>
+            <div class="ai-result"><span class="ai-result-title"><i></i> GROUNDED ANSWER</span><p>Repository actions require explicit human approval before execution. <b>[S1]</b></p><div class="source-chip">▤ &nbsp; approval.py <span>lines 1–18</span></div></div>
+            <div class="ai-status"><span>↳ Evidence verified</span><span>Human review required</span></div>
+          </div>
+        </article>
+
+        <article class="project-card project-kv reveal">
+          <div class="project-copy">
+            <div class="project-overline"><span>03 / SYSTEMS PROGRAMMING</span><span class="project-state">OPEN SOURCE</span></div>
+            <h3>Nova<span>KV</span></h3>
+            <p>A single-node, concurrent key-value service with TCP networking, sharded synchronization, TTL expiry, a bounded LRU cache, and checksummed write-ahead logging for restart recovery.</p>
+            <div class="project-tags"><span>C++17</span><span>TCP/IP</span><span>Concurrency</span><span>WAL</span><span>LRU</span></div>
+            <a class="project-link" href="https://github.com/Alita41/novakv" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span><span class="sr-only"> for NovaKV</span></a>
+          </div>
+          <div class="project-graphic graphic-kv" aria-hidden="true">
+            <div class="terminal-header"><span class="terminal-dots"><i></i><i></i><i></i></span><span>novakv / tcp session</span><span>⌁</span></div>
+            <div class="terminal-body"><p><span>❯</span> SET user:42 Talat</p><p class="terminal-response">+OK</p><p><span>❯</span> GET user:42</p><p class="terminal-response">$5 &nbsp; Talat</p><p><span>❯</span> INCR counter 1</p><p class="terminal-response">:1</p><p><span>❯</span> <i class="blink"></i></p></div>
+            <div class="kv-footer"><span><i></i> TCP CONNECTED</span><span>WAL · TTL · LRU</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="projects-note">Interested in implementation details, architecture decisions, or test coverage? Each project includes source code and technical documentation on GitHub.</p>
+    </section>
+
+    <section class="section expertise-section" id="expertise" aria-labelledby="expertise-heading">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="kicker"><span class="kicker-number">02.</span> TOOLKIT & APPROACH</p><h2 id="expertise-heading">The <span>toolbox.</span></h2></div><p>I enjoy working at the boundary between sound engineering fundamentals and modern developer tools.</p></div>
+        <div class="expertise-grid">
+          <div class="expertise-card reveal"><div class="expertise-symbol">{ }</div><span class="expertise-index">/ 01</span><h3>Systems & backend</h3><p>Designing software that handles real-world complexity: concurrency, persistence, APIs, and reliability.</p><div class="expertise-tags">C++ · Python · TCP/IP · Docker · PostgreSQL · Redis</div></div>
+          <div class="expertise-card reveal"><div class="expertise-symbol">⌕</div><span class="expertise-index">/ 02</span><h3>Search & retrieval</h3><p>From inverted indexes to hybrid pipelines, with a bias toward measurable, reproducible behavior.</p><div class="expertise-tags">BM25 · FAISS · RRF · Ranking · Evaluation</div></div>
+          <div class="expertise-card reveal"><div class="expertise-symbol">✳</div><span class="expertise-index">/ 03</span><h3>Applied AI</h3><p>Grounded AI experiences built on retrieval, citations, structured data, and human oversight.</p><div class="expertise-tags">RAG · Transformers · FastAPI · GitHub API · Evals</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section container" id="about" aria-labelledby="about-heading">
+      <div class="about-visual reveal"><div class="about-frame"><div class="portrait-backdrop"></div><img class="about-photo" src="profile.jpg" alt="Portrait from Talat's existing portfolio" loading="lazy"><div class="photo-label"><span class="photo-dot"></span> SOFTWARE + CURIOSITY</div></div><div class="about-side-note">BRIDGING TECHNICAL THINKING<br>AND BUSINESS PERSPECTIVE</div></div>
+      <div class="about-content reveal"><p class="kicker"><span class="kicker-number">03.</span> A LITTLE ABOUT ME</p><h2 id="about-heading">Curiosity is my<br><span>starting point.</span></h2><p>I'm Talat, a computer science graduate from <strong>Oregon State University</strong> with a background in business administration from <strong>IBA Karachi</strong>. That combination shapes how I think about technology: understand the problem, build with intention, and make the result useful.</p><p>I'm especially drawn to backend engineering, machine learning infrastructure, and information retrieval — areas where careful design choices have a tangible effect on performance and reliability.</p><div class="education"><div><span>01</span><div><strong>Oregon State University</strong><small>Computer Science</small></div></div><div><span>02</span><div><strong>Institute of Business Administration, Karachi</strong><small>Business Administration</small></div></div></div></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading"><div class="container contact-shell reveal"><div><p class="kicker"><span class="kicker-number">04.</span> LET'S CONNECT</p><h2 id="contact-heading">Have something<br><em>interesting</em> in mind?</h2><p>I'm interested in software engineering, ML engineering, and backend opportunities. If you're building something thoughtful, I'd love to hear about it.</p></div><div class="contact-right"><a class="contact-email" href="mailto:talatzehra.ali14@gmail.com">talatzehra.ali14@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-actions"><button type="button" class="copy-email" data-copy="talatzehra.ali14@gmail.com" aria-live="polite">Copy email <span aria-hidden="true">⧉</span></button><a href="https://github.com/Alita41" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/talat-zehra-ali-36394a257" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><a href="#top" class="footer-mark">T<span>.</span></a><span>Designed & built with intention.</span></div><div><span>© <span id="year">2026</span> Talat Zehra Ali</span><a href="#top">Back to top ↑</a></div></div></footer>
 </body>
 </html>
