@@ -7,6 +7,7 @@ A custom, responsive, static portfolio for **Talat Zehra Ali**, focused on softw
 - [AtlasSearch](https://github.com/Alita41/atlassearch) — C++17 BM25, multilingual search, optional E5/FAISS hybrid retrieval, Python API, Redis and PostgreSQL.
 - [DevLens](https://github.com/Alita41/devlens) — RAG engineering knowledge assistant, GitHub ingestion, source-cited retrieval, issue triage, human approval.
 - [NovaKV](https://github.com/Alita41/novakv) — concurrent C++17 TCP key-value store with TTL, LRU, WAL, and recovery.
+- [EdgeVision](https://github.com/Alita41/edgevision) — edge-first OpenCV perception, temporal tracking, optional TFLite classification, event logging, and a monitoring dashboard.
 
 ## Run locally
 
